@@ -25,6 +25,12 @@ transporter = nodemailer.createTransport({
   });
   })
 
+  app.get("/",(req,res) => {
+    res.write("connected!")
+  })
 
-  app.listen(8080);
+
+  app.listen(8080, () => {
+    console.log("connected to 8080");
+  });
   
